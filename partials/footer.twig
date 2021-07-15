@@ -1,0 +1,17 @@
+<footer id="footer">
+    <div class="footer-unit-information">
+    {% block footer %}
+        <p class="entity-name">{{ config.entity.name }}</p>
+        <p><a href="{{ config.entity.site }}" target="_new" rel="noopener noreferer">{{ config.entity.site }}</a></p>
+        <p><a href="mailto:{{ config.entity.email }}">{{ config.entity.email }}</a></p> 
+    {% endblock %}
+    </div>
+    <div class="footer-copyright">
+        <span class="copyright-information">FCCN - Computação Científica Nacional</span>
+        <div class="footer-copyright-logos">
+            <img src="{{ theme_url }}/img/logo_republicapt.svg" alt="Logotipo da República Portuguesa">
+            <img src="{{ theme_url }}/img/logo_FCT.svg" alt="Logotipo da Fundação para a Ciência e Tecnologia">
+            {% block footer_extra_logos %}{% endblock %}
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,48 @@
+    <header id="header" role="banner">
+    <a href="#main-content" class="sr-only" accesskey="c">Saltar para o conteúdo</a>
+        <div class="container">
+            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+                <span class="icon-menu" aria-hidden="true"></span>
+                <span class="sr-only">Toggle Menu</span>
+            </a>
+            <div class="branding">
+            <div class="branding-entities">
+            {% if config.entity.url %}
+                <div id="logo" aria-hidden="true">
+                    <a href="{{ "index"|link }}">
+                        <img src="{{ config.entity.url }}" width="{{ config.entity.width}}" height="{{config.entity.height}}" alt="{{ config.entity.name }}" />
+                    </a>
+                </div>
+            {% endif %}
+                {% if config.show_both_logos %}
+                <div id="title"{{ pages["_meta"].meta.tagline ? ' class="tagline"' }}>
+                    <a href="{{ "index"|link }}">
+                        <span class="site-title">{{ config.site_title }}</span>
+                        {{ pages["_meta"].meta.tagline|markdown }}
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+                <div class="theme-switcher-wrapper">
+                    <label class="theme-switcher" for="checkbox">
+                        <input type="checkbox" id="checkbox" aria-labeledby="darkmode-label"/>
+                        <div class="slider round"></div>
+                    </label>
+                    <em><span id="darkmode-label" class="sr-only">Ativar modo escuro</span></em>
+                </div>
+            </div>
+        </div>
+        <span class="separator"></span>
+        <div class="container">
+            <nav id="nav" role="navigation" tabindex="-1">
+                <ul>
+                    {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
+                        <li{% if page.id == current_page.id %} class="active"{% endif %}>
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
