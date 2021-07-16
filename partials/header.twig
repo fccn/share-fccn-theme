@@ -23,6 +23,7 @@
                 </div>
                 {% endif %}
             </div>
+            {% if pages["_meta"].meta.darkmode %}
                 <div class="theme-switcher-wrapper">
                     <label class="theme-switcher" for="checkbox">
                         <input type="checkbox" id="checkbox" aria-labeledby="darkmode-label"/>
@@ -30,6 +31,7 @@
                     </label>
                     <em><span id="darkmode-label" class="sr-only">Ativar modo escuro</span></em>
                 </div>
+            {% endif %}
             </div>
         </div>
         <span class="separator"></span>
