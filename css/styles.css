@@ -515,10 +515,32 @@ input::-moz-focus-inner, button::-moz-focus-inner {
     padding: 0;
 }
 
+/** BRANDING AREA CONTENT **/
 .branding {
     display: flex;
     justify-content: space-between;
 }
+
+/** PAGE CONTENT **/
+.page-content {
+    display: flex;
+}
+
+#page-toc-container {
+    list-style: none;
+    width: 16rem;
+}
+
+#page-toc-container li a {
+    font-size: .8rem;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+#page-toc-container li a:hover {
+    color: var(--menu-selector-color);
+}
+
 
 /** DARK MODE SWITCHER **/
 .theme-switcher-wrapper {
