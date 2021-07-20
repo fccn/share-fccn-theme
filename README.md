@@ -40,11 +40,31 @@ This file saves site wide information regarding entity information and Dark Mode
 
 ```markdown
 ---
-DarkMode: true
+site_logo: %assets%/img/pico-white.svg
+footer: # Entity footer information
+  name: Unidade de Computação Cientifica Nacional
+  site: https://www.fccn.pt
+  email: geral@fccn.pt
+darkmode: true # can be set to true or false, depending on the necessity
 ---
 ```
+
+### The _header.md
+
+The header file saves the entity logo information and the flag to display both logos on the page
+
+```markdown
+---
+entity:
+    url: https://www.fccn.pt/media/2021/02/header_logo.svg
+    width: 208
+    height: 37
+    description: Unidade para a Computação Cientifica Nacional  # The alt text for the logo
+show_both_logos: false  # If true shows the FCCN and entity logo on the header. If false, only shows the entity logo
+---
+```
+
 ## TODO
 
-[ ] Define a _footer.md to save entity information
-[ ] Solve Mobile menu errors
-[ ] Fix header SVG background
+* Solve Mobile menu errors
+* Fix header SVG background

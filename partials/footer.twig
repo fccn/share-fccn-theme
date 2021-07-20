@@ -1,10 +1,13 @@
 <footer id="footer">
     <div class="footer-unit-information">
-    {% block footer %}
-        <p class="entity-name">{{ config.entity.name }}</p>
-        <p><a href="{{ config.entity.site }}" target="_new" rel="noopener noreferer">{{ config.entity.site }}</a></p>
-        <p><a href="mailto:{{ config.entity.email }}">{{ config.entity.email }}</a></p> 
-    {% endblock %}
+    {% if pages["_meta"] %}
+        {% block footer %}
+            {{ pages["_meta"].meta.footer.heading }}
+            <p class="entity-name">{{ pages["_meta"].meta.footer.name }}</p>
+            <p><a href="{{ pages["_meta"].meta.footer.site }}" target="_new" rel="noopener noreferer">{{ pages["_meta"].meta.footer.site }}</a></p>
+            <p><a href="mailto:{{ pages["_meta"].meta.footer.email }}">{{ pages["_meta"].meta.footer.email }}</a></p> 
+        {% endblock %}
+    {% endif %}
     </div>
     <div class="footer-copyright">
         <span class="copyright-information">FCCN - Computação Científica Nacional</span>

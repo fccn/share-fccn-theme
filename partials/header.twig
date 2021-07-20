@@ -7,10 +7,10 @@
             </a>
             <div class="branding">
             <div class="branding-entities">
-            {% if config.entity.url %}
+            {% if pages["_header"].meta.entity.url %}
                 <div id="logo" aria-hidden="true">
                     <a href="{{ "index"|link }}">
-                        <img src="{{ config.entity.url }}" width="{{ config.entity.width}}" height="{{config.entity.height}}" alt="{{ config.entity.name }}" />
+                        <img src="{{ pages["_header"].meta.entity.url }}" width="{{ pages["_header"].meta.entity.width}}" height="{{ pages["_header"].entity.height}}" alt="{{ pages["_header"].meta.entity.description }}" />
                     </a>
                 </div>
             {% endif %}
