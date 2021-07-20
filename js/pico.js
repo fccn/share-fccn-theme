@@ -27,8 +27,8 @@ function main()
     }
 
     // responsive menu
-    var menu = document.getElementById('nav'),
-        menuToggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav');
+    const menuToggle = document.getElementById('nav-toggle');
 
     if (menu && menuToggle) {
         function toggleMenuEvent(event) {
