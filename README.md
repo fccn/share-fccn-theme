@@ -25,6 +25,7 @@ There are currently 2 available templates
 
 * __index__ (Default template to create regular text pages)
 * __page-toc__ (Renders a table of contents navigation on the right side of the page)
+* __code__ (Loads Highlight.js for code highlighting)
 
 To use these templates, define the specific name in the frontmatter
 ```markdown
