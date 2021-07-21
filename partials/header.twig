@@ -1,7 +1,7 @@
     <header id="header" role="banner">
     <a href="#main-content" class="sr-only" accesskey="c">Saltar para o conteúdo</a>
         <div class="container">
-            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false" tabindex="1">
+            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false">
                 <span class="icon-menu" aria-hidden="true">
                     <span class="dash"></span>
                     <span class="dash"></span>
@@ -12,23 +12,22 @@
             <div class="branding">
             <div class="branding-entities">
             {% if pages["_header"].meta.entity.url %}
-                <div id="logo" aria-hidden="true">
-                    <a href="{{ "index"|link }}">
+                <div id="logo">
+                    <a href="{{ "index"|link }}" title="Voltar à página principal">
                         <img src="{{ pages["_header"].meta.entity.url }}" width="{{ pages["_header"].meta.entity.width}}" height="{{ pages["_header"].entity.height}}" alt="{{ pages["_header"].meta.entity.description }}" />
                     </a>
                 </div>
             {% endif %}
                 {% if config.show_both_logos %}
-                <div id="title"{{ pages["_meta"].meta.tagline ? ' class="tagline"' }}>
+                <div id="title">
                     <a href="{{ "index"|link }}">
                         <span class="site-title">{{ config.site_title }}</span>
-                        {{ pages["_meta"].meta.tagline|markdown }}
                     </a>
                 </div>
                 {% endif %}
             </div>
             {% if pages["_meta"].meta.darkmode %}
-                <div class="theme-switcher-wrapper">
+                <div class="theme-switcher-wrapper" aria-hidden="true">
                     <label class="theme-switcher" for="checkbox">
                         <input type="checkbox" id="checkbox" aria-labeledby="darkmode-label"/>
                         <div class="slider round"></div>
@@ -40,7 +39,7 @@
         </div>
         <span class="separator"></span>
         <div class="container">
-            <nav id="nav" role="navigation" tabindex="-1">
+            <nav id="nav" role="navigation">
                 <ul>
                     {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
                         <li{% if page.id == current_page.id %} class="active"{% endif %}>

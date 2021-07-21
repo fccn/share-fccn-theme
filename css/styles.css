@@ -13,6 +13,7 @@
     --primary-text-color: #24292E;
     --secondary-text-color: #13AAC4;
     --menu-selector-color: #2BA948;
+    --link-color: #005b54;
     --highlight-bg-color: #000;
     --highlight-text-color: #000;
     --border-code-color: #c7c7c7;
@@ -29,6 +30,7 @@
     --primary-text-color: #FFFFFF;
     --secondary-text-color: #000;
     --menu-selector-color: #2BA948;
+    --link-color: #005b54;
     --highlight-bg-color: #000;
     --highlight-text-color: #000;
     --border-code-color: #4e4e4e;
@@ -338,7 +340,7 @@ p, hr, table, .table-responsive, ol, ul, dl, dd, pre, blockquote, fieldset {
 }
 
 a {
-    color: var(--menu-selector-color);
+    color: var(--link-color);
     text-decoration: none;
     -webkit-transition: color .2s ease-in;
             transition: color .2s ease-in;
