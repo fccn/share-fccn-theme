@@ -47,8 +47,24 @@ footer: # Entity footer information
   site: https://www.fccn.pt
   email: geral@fccn.pt
 darkmode: true # can be set to true or false, depending on the necessity
+area: knowledge
 ---
 ```
+
+#### Site areas by color
+
+Areas can be defined and rendered accordingly. Colors are similar to the ones used in the main FCCN site.
+
+Site areas by code (available values):
+* connectivity
+* computation
+* collaboration
+* knowledge
+* security
+* innovation
+
+If the `area` is not defined in the `_meta.md` file, the system defaults to the main header (FCCN green color)
+
 
 ### The _header.md
 

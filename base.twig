@@ -18,13 +18,12 @@
     <link rel="icon" href="{{ theme_url }}/img/cropped-icon_fccn_simples-32x32.png" sizes="32x32">
     <link rel="icon" href="{{ theme_url }}/img/cropped-icon_fccn_simples-192x192.png" sizes="192x192">
     <link rel="stylesheet" href="{{ theme_url }}/css/styles.css" type="text/css" />
-    <script src=""></script>
 </head>
 <body{% if config.theme_config.widescreen %} class="widescreen"{% endif %}>
     {% include "partials/header.twig" %}
 
     <main id="main-content" role="main">
-        <div id="page-title">
+        <div id="page-title" class="header-{% if pages["_meta"].meta.area %}{{ pages["_meta"].meta.area}}{% else %}default{% endif %}">
             <div class="container">
                 <h1>{{ meta.title }}</h1>
             </div>
