@@ -89,19 +89,3 @@ Site areas by code (available values):
 * innovation
 
 If the `area` is not defined in the `_meta.md` file, the system defaults to the main header (FCCN green color)
-
-
-### The _header.md
-
-The header file saves the entity logo information and the flag to display both logos on the page
-
-```markdown
----
-entity:
-    url: https://www.fccn.pt/media/2021/02/header_logo.svg
-    width: 208
-    height: 37
-    description: Unidade para a Computação Cientifica Nacional  # The alt text for the logo
-show_both_logos: false  # If true shows the FCCN and entity logo on the header. If false, only shows the entity logo
----
-```
