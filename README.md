@@ -25,8 +25,8 @@ There are currently 2 available templates
 
 * __index__ (Default template to create regular text pages)
 * __page-toc__ (Renders a table of contents navigation on the right side of the page)
-* __code__ (Loads Highlight.js for code highlighting)
 
+All templates support code highlighting with Highlight.js.
 To use these templates, define the specific name in the frontmatter
 ```markdown
 ---
@@ -80,8 +80,3 @@ entity:
 show_both_logos: false  # If true shows the FCCN and entity logo on the header. If false, only shows the entity logo
 ---
 ```
-
-## TODO
-
-* Solve Mobile menu errors
-* Fix header SVG background
