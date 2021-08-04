@@ -364,8 +364,7 @@ article {
 @media (max-width: 767px) {
     #main { padding: 2em 0 1em; }
 
-    #title, #logo { padding: 2em 1.5em 2em 0; }
-    #logo { min-height: 6.8em; }
+    #title, #logo { padding: 1.2em 1.5em 1.2em 0; }
 
     #nav {
         clear: both;
@@ -396,7 +395,7 @@ article {
         line-height: 2em;
         text-align: center;
         cursor: pointer;
-        margin-block-start: 2rem;
+        margin-block-start: 1.12rem;
         margin-inline-start: 1rem;
     }
     .js #nav-toggle .icon-menu {
@@ -637,6 +636,7 @@ input::-moz-focus-inner, button::-moz-focus-inner {
 .branding {
     display: flex;
     justify-content: space-between;
+    min-height: 5rem;
 }
 
 /** PAGE CONTENT **/

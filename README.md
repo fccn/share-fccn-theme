@@ -27,7 +27,9 @@ There are currently 2 available templates
 * __page-toc__ (Renders a table of contents navigation on the right side of the page)
 
 All templates support code highlighting with Highlight.js.
-To use these templates, define the specific name in the frontmatter
+
+To use these templates, define the specific name in the frontmatter of the content __md__ file.
+
 ```markdown
 ---
 Title: Page title
@@ -49,6 +51,29 @@ footer: # Entity footer information
 darkmode: true # can be set to true or false, depending on the necessity
 area: knowledge
 ---
+```
+
+### _header.md Header metadata file
+
+You can override the site logo by changing entity information in this file.
+
+The follow example shows how the `_header.md` works.
+
+```markdown
+---
+entity:
+  url: https://www.fccn.pt/media/2021/02/header_logo.svg
+  width: 208
+  height: 37
+  description: Unidade para a Computação Cientifica Nacional
+---
+```
+
+Instead of using an absolute URL for the images you can use the `assets` directory. To use it, define a path to a file like this:
+
+```markdown
+entity:
+  url: %assets_url%/images/logo.svg
 ```
 
 #### Site areas by color
