@@ -89,3 +89,11 @@ Site areas by code (available values):
 * innovation
 
 If the `area` is not defined in the `_meta.md` file, the system defaults to the main header (FCCN green color)
+
+
+## Extending the theme
+
+You can extend the theme by adding plugins.
+One of the custom plugins available is the Pico Infobox, that allows you to create custom boxes for relevant information.
+
+You can find the documentation in [https://github.com/fccn/pico-infobox-plugin](https://github.com/fccn/pico-infobox-plugin)
