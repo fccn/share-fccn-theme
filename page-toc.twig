@@ -2,11 +2,11 @@
 
 {% block content %}
 <section class="page-content">
-    <article>
+    <article class="page-main">
     {{ content }}
     </article>
-    <aside>
-        <nav class="page-toc">
+    <aside class="page-toc toc-{% if meta.toc.position == "right"%}right{% else %}left{% endif %}">
+        <nav class="page-toc-nav">
             <ul id="page-toc-container">
             </ul>
         </nav>
@@ -16,4 +16,5 @@
 
 {% block scripts %}
     <script src="{{ theme_url }}/js/toc.js" type="text/javascript"></script>
+    <script>generatePageTOC({{ meta.toc.depth }});</script>
 {% endblock %}

@@ -638,35 +638,66 @@ input::-moz-focus-inner, button::-moz-focus-inner {
     display: flex;
 }
 
-aside {
-    flex-grow: 1;
-    flex-basis: 300px;
+.page-main {
+    max-width: 75%;
+}
+
+.page-toc {
+    max-width: 25%;
     align-self: start;
     position: sticky;
     top: 2em;
 }
 
-@media (max-width: 767px) {
-    aside {    
-        position: relative;
-        order: -1;
-    }
-}
-
-.page-toc {
+.page-toc-nav {
     max-height: calc(100vh - var(--offset) * 2);
 }
 
-#page-toc-container {
+.page-toc ul {
     list-style: none;
-    width: 14.5rem;
-    padding-left: 2.5rem;
+    margin-bottom: 0;
+}
+
+.toc-left {
+    order: -1;
+    padding-right: 1.5em;
+}
+
+.toc-right {
+    order: 1;
+    padding-left: 1.5em;
+}
+
+@media (max-width: 767px) {
+    .page-main {
+        max-width: 100%;
+    }
+
+    .page-toc {
+        max-width: 100%; 
+        position: relative;
+        order: -1;
+        padding: 0;
+    }
+}
+
+#page-toc-container {
+    padding: 0;
+}
+
+#page-toc-container li {
+    text-align: left;
 }
 
 #page-toc-container li a {
     font-size: .8rem;
     font-weight: 500;
     color: var(--primary-text-color);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 #page-toc-container li a:hover {
