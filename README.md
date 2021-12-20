@@ -21,10 +21,10 @@ theme: fccn-share-theme             # This should be set to
 
 ### Templates
 
-There are currently 2 available templates
+There are currently 2 available templates:
 
 * __index__ (Default template to create regular text pages)
-* __page-toc__ (Renders a table of contents navigation on the right side of the page)
+* __page-toc__ (Renders a table of contents navigation on the page)
 
 All templates support code highlighting with Highlight.js.
 
@@ -32,8 +32,29 @@ To use these templates, define the specific name in the frontmatter of the conte
 
 ```markdown
 ---
-Title: Page title
-Template: index
+title: Page title
+template: index
+---
+```
+
+#### Table of Contents
+
+When using the `page-toc` template, the first level of the table of contents is the `h2` element (in markdown defined with `##`), the second level is the `h3` (in markdown defined with `###`), and so on.
+
+##### Customization
+
+It is possible to customize the table of contents through the following properties:
+
+* __position__ (Sets the side of the page in which the table of contents is rendered: `left` or `right`, defaults to `right`)
+* __depth__ (Sets the maximum level rendered on the table of contents, defaults to 2)
+
+```markdown
+---
+title: Page title
+template: page-toc
+toc:
+  position: left
+  depth: 3
 ---
 ```
 
