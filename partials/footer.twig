@@ -4,7 +4,7 @@
         {% block footer %}
             {{ pages["_meta"].meta.footer.heading }}
             <p class="entity-name">{{ pages["_meta"].meta.footer.name }}</p>
-            <p><a href="{{ pages["_meta"].meta.footer.site }}" target="_new" rel="noopener noreferer">{{ pages["_meta"].meta.footer.site }}</a></p>
+            <p><a href="{{ pages["_meta"].meta.footer.site }}" target="_blank" rel="noopener noreferrer">{{ pages["_meta"].meta.footer.site }}</a></p>
             <p><a href="mailto:{{ pages["_meta"].meta.footer.email }}">{{ pages["_meta"].meta.footer.email }}</a></p> 
         {% endblock %}
     {% endif %}
@@ -12,8 +12,8 @@
     <div class="footer-copyright">
         <span class="copyright-information">FCCN - Computação Científica Nacional</span>
         <div class="footer-copyright-logos">
-            <img src="{{ theme_url }}/img/logo_republicapt.svg" alt="Logotipo da República Portuguesa">
-            <img src="{{ theme_url }}/img/logo_FCT.svg" alt="Logotipo da Fundação para a Ciência e Tecnologia">
+            <img id="footer-logo-republica" alt="Logotipo da República Portuguesa" src="{{ theme_url }}/img/footer-republica.svg">
+            <img id="footer-logo-fct" alt="Logotipo da Fundação para a Ciência e Tecnologia" src="{{ theme_url }}/img/footer-fct.svg">
             {% block footer_extra_logos %}{% endblock %}
         </div>
     </div>

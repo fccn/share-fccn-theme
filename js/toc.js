@@ -5,7 +5,7 @@ function generatePageTOC(depth = 2) {
   depth = (depth <= 0 || depth > 5) ? 5 : depth;
 
   // Get all possible headings within the specified depth
-  let headings = document.querySelectorAll('article ' + Array.from({length: depth}, (_, i) => "h" + (i + 2)).join(","));
+  let headings = document.querySelectorAll('div ' + Array.from({length: depth}, (_, i) => "h" + (i + 2)).join(","));
 
   // Root of the TOC
   let currentNode = tocContainer;

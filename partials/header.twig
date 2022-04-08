@@ -1,7 +1,7 @@
-    <header id="header" role="banner">
+    <header id="header">
     <a href="#main-content" class="sr-only" accesskey="c">Saltar para o conteúdo</a>
         <div class="container">
-            <a id="nav-toggle" title="Toggle Menu" role="button" aria-controls="nav" aria-expanded="false">
+            <a id="nav-toggle" title="Navigation Toggle" role="button" aria-controls="nav" aria-expanded="false">
                 <span class="icon-menu" aria-hidden="true">
                     <span class="dash"></span>
                     <span class="dash"></span>
@@ -10,29 +10,27 @@
                 <span class="sr-only">Toggle Menu</span>
             </a>
             <div class="branding">
-            <div class="branding-entities">
-            {% if pages["_header"].meta.entity.url %}
-                <div id="logo">
-                    <a href="{{ "index"|link }}" title="Voltar à página principal">
-                        <img src="{{ pages["_header"].meta.entity.url|url }}" width="{{ pages["_header"].meta.entity.width}}" height="{{ pages["_header"].entity.height}}" alt="{{ pages["_header"].meta.entity.description }}" />
-                    </a>
+                <div class="branding-entities">
+                    <div id="logo">
+                        <a href="{{ "index"|link }}" title="Voltar à página principal">
+                            <img alt="Unidade para a Computação Cientifica Nacional" src="{{ theme_url }}/img/header-fccn.svg"/>
+                        </a>
+                    </div>
                 </div>
-            {% endif %}
-            </div>
-            {% if pages["_meta"].meta.darkmode %}
+                {% if pages["_meta"].meta.darkmode %}
                 <div class="theme-switcher-wrapper" aria-hidden="true">
                     <label class="theme-switcher" for="checkbox">
-                        <input type="checkbox" id="checkbox" aria-labeledby="darkmode-label"/>
-                        <div class="slider round"></div>
+                        <input type="checkbox" id="checkbox" aria-labelledby="darkmode-label"/>
+                        <span class="slider round"></span>
                     </label>
                     <em><span id="darkmode-label" class="sr-only">Ativar modo escuro</span></em>
                 </div>
-            {% endif %}
+                {% endif %}
             </div>
         </div>
         <span class="separator"></span>
         <div class="container">
-            <nav id="nav" role="navigation">
+            <nav id="nav">
                 <ul>
                     {% for page in pages(depthOffset=-1) if page.title and not page.hidden %}
                         <li{% if page.id == current_page.id %} class="active"{% endif %}>
@@ -41,6 +39,5 @@
                     {% endfor %}
                 </ul>
             </nav>
-            
         </div>
     </header>

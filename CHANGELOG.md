@@ -8,4 +8,10 @@
 
 ## 03/08/2021
 * Add colors by area
-* Add areas to the _meta.md file.
+* Add areas to the _meta.md file
+
+## 17/09/2021
+* Add TOC depth and position configuration
+
+## 08/04/2022
+* Improve accessibility score (https://www.acessibilidade.gov.pt/)
