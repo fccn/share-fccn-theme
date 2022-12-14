@@ -709,20 +709,6 @@ input::-moz-focus-inner, button::-moz-focus-inner {
     padding-left: 1.5em;
 }
 
-@media (max-width: 767px) {
-    .page-main {
-        max-width: 100%;
-    }
-
-    .page-toc {
-        max-width: 100%; 
-        position: relative;
-        order: -1;
-        padding: 0;
-        align-self: normal;
-    }
-}
-
 #page-toc-container {
     padding: 0;
 }
@@ -747,6 +733,21 @@ input::-moz-focus-inner, button::-moz-focus-inner {
 }
 
 @media (max-width: 767px) {
+    .page-main {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .page-toc {
+        max-width: 100%; 
+        width: 100%;
+        position: relative;
+        order: -1;
+        padding: 0;
+        align-self: normal;
+        top: 0;
+    }
+
     .page-content {
         flex-direction: column;
     }

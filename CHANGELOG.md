@@ -7,11 +7,14 @@
 * Fixed header logo not rendering the URL properly
 
 ## 03/08/2021
-* Add colors by area
-* Add areas to the _meta.md file
+* Added colors by area
+* Added areas to the _meta.md file
 
 ## 17/09/2021
-* Add TOC depth and position configuration
+* Added TOC depth and position configuration
 
 ## 08/04/2022
-* Improve accessibility score (https://www.acessibilidade.gov.pt/)
+* Improved accessibility score (https://www.acessibilidade.gov.pt/)
+
+## 14/12/2022
+* Improved page layout for smaller screens
